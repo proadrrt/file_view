@@ -1,5 +1,5 @@
 server:
-  port: 8083
+  port: 8000
 
 #操作先关文件存放的根目录,此目录在初始化时候 里面的内容会被删除
 tmp:
@@ -11,7 +11,7 @@ soffice:
 #openoffice 链接端口
   port: 8101
 #预览纯文本txt需要转码,window下为GBK,linux下为UTF-8
-  defaultCharset: GBK
+  defaultCharset: UTF-8
 
 #文本类型文件后缀
 text:
@@ -28,3 +28,4 @@ compress:
 #pdf文件
 pdf:
   type: pdf
+

@@ -30,6 +30,7 @@ public class DownloadNetFileServiceImpl implements DownloadNetFileService {
 			connection.setRequestProperty("User-Agent", "Mozilla/4.0 (compatible; MSIE 5.0; Windows NT; DigExt)");
 
 			connection.setRequestMethod("GET");
+
 			// 文件多媒体类型MIME
 			fileModel.setOriginalMIMEType(connection.getContentType());
 			// 源文件的路径
@@ -43,6 +44,7 @@ public class DownloadNetFileServiceImpl implements DownloadNetFileService {
 			// 源文件的名字
 			fileModel.setOriginalFile(orignal.substring(lastSlash + 1));
 			InputStream in = connection.getInputStream();
+
 			try {
 				// 文件存储到本地临时目录
 				this.fileDao.saveFile(in, fileModel);
